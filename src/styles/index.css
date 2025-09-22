@@ -1,0 +1,25 @@
+/* ===== KJ DESIGN SYSTEM ===== */
+/* Complete design system with primitive and semantic tokens */
+
+/* Import all design system tokens */
+@import './primitive-tokens.css';
+@import './semantic-tokens.css';
+@import './component-tokens.css';
+
+/* Design System Reset */
+.kj-reset {
+  box-sizing: border-box;
+}
+
+.kj-reset *,
+.kj-reset *::before,
+.kj-reset *::after {
+  box-sizing: inherit;
+}
+
+/* Design System Font Setup */
+.kj-font {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

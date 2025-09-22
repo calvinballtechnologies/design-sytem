@@ -1,0 +1,205 @@
+/* ===== SEMANTIC DESIGN TOKENS ===== */
+/* These tokens reference primitive tokens and can be themed */
+
+:root {
+  /* ===== LIGHT THEME (DEFAULT) ===== */
+
+  /* Background Colors */
+  --bg-primary: var(--color-slate-50);
+  --bg-secondary: var(--color-white);
+  --bg-tertiary: var(--color-slate-100);
+  --bg-alternative: var(--color-white);
+  --bg-alternative-border: var(--color-slate-300);
+  --bg-hover: var(--color-slate-100);
+  --bg-sidenav: var(--color-white);
+
+  /* Text Colors */
+  --text-primary: var(--color-black);
+  --text-secondary: var(--color-gray-500);
+  --text-tertiary: var(--color-gray-400);
+  --text-hover: var(--color-gray-500);
+  --text-sidenav: var(--color-gray-400);
+
+  /* Border Colors */
+  --border-primary: var(--color-slate-200);
+  --border-secondary: var(--color-slate-300);
+  --border-alternative: var(--color-slate-300);
+  --border-hover: var(--color-slate-400);
+
+  /* Primary Brand Colors */
+  --primary-1: rgba(105, 15, 208, 1);
+  --primary-2: rgba(226, 0, 255, 1);
+  --primary-3: rgba(61, 0, 255, 1);
+
+  /* Button Tokens */
+  --button-white-bg: var(--color-white);
+  --button-white-color: var(--color-gray-500);
+  --button-white-border-color: var(--color-slate-100);
+  --button-white-bg-hover: var(--color-white);
+  --button-white-color-hover: var(--color-gray-900);
+  --button-white-border-color-hover: var(--color-gray-900);
+
+  /* Status Colors */
+  --status-success-bg: var(--color-green-50);
+  --status-success-text: var(--color-green-800);
+  --status-success-border: var(--color-green-200);
+
+  --status-warning-bg: var(--color-yellow-50);
+  --status-warning-text: var(--color-yellow-800);
+  --status-warning-border: var(--color-yellow-200);
+
+  --status-error-bg: var(--color-red-50);
+  --status-error-text: var(--color-red-800);
+  --status-error-border: var(--color-red-200);
+
+  --status-info-bg: var(--color-blue-50);
+  --status-info-text: var(--color-blue-800);
+  --status-info-border: var(--color-blue-200);
+}
+
+/* ===== DARK THEME ===== */
+.neutral-dark {
+  /* Background Colors */
+  --bg-primary: var(--color-black) !important;
+  --bg-secondary: hsl(0, 0%, 9%) !important;
+  --bg-tertiary: var(--color-gray-900);
+  --bg-alternative: #232323;
+  --bg-alternative-border: #232323;
+  --bg-hover: #5b21b6;
+  --bg-sidenav: var(--color-black) !important;
+
+  /* Text Colors */
+  --text-primary: var(--color-white) !important;
+  --text-secondary: #f4f4f5 !important;
+  --text-tertiary: var(--color-slate-400);
+  --text-hover: #e9d5ff;
+  --text-sidenav: var(--color-gray-400);
+
+  /* Border Colors */
+  --border-primary: var(--color-gray-700);
+  --border-secondary: var(--color-gray-600);
+  --border-alternative: var(--color-gray-700);
+  --border-hover: var(--color-purple-600);
+
+  /* Button Tokens */
+  --button-white-bg: #292524;
+  --button-white-color: #e7e5e4;
+  --button-white-border-color: #57534e;
+  --button-white-bg-hover: #57534e;
+  --button-white-color-hover: #f5f5f5;
+  --button-white-border-color-hover: #57534e;
+
+  /* Status Colors */
+  --status-success-bg: var(--color-green-900);
+  --status-success-text: var(--color-green-400);
+  --status-success-border: var(--color-green-500);
+
+  --status-warning-bg: var(--color-yellow-900);
+  --status-warning-text: var(--color-yellow-400);
+  --status-warning-border: var(--color-yellow-500);
+
+  --status-error-bg: var(--color-red-900);
+  --status-error-text: var(--color-red-400);
+  --status-error-border: var(--color-red-500);
+
+  --status-info-bg: var(--color-blue-900);
+  --status-info-text: var(--color-blue-400);
+  --status-info-border: var(--color-blue-500);
+
+  /* Console Component Tokens */
+  --shortcut-card-border: #374151;
+  --console-card-bg: var(--bg-secondary);
+  --console-card-bg-hover: var(--bg-alternative);
+  --console-card-border: var(--bg-secondary);
+  --console-card-border-hover: var(--bg-alternative);
+}
+
+/* ===== LEAF THEME ===== */
+.leaf {
+  /* Background Colors */
+  --bg-primary: #e2f2e8;
+  --bg-secondary: var(--color-white);
+  --bg-tertiary: var(--color-green-50);
+  --bg-alternative: var(--color-white);
+  --bg-alternative-border: var(--color-green-200);
+  --bg-hover: #ecfdf5;
+  --bg-sidenav: var(--color-white);
+
+  /* Text Colors */
+  --text-primary: var(--color-black);
+  --text-secondary: var(--color-gray-500);
+  --text-tertiary: var(--color-gray-400);
+  --text-hover: #14532d;
+  --text-sidenav: var(--color-gray-400);
+
+  /* Border Colors */
+  --border-primary: var(--color-green-200);
+  --border-secondary: var(--color-green-300);
+  --border-alternative: var(--color-green-200);
+  --border-hover: var(--color-green-400);
+
+  /* Primary Brand Colors */
+  --primary-1: rgb(15, 164, 102);    /* from existing theme */
+  --primary-2: rgba(48, 92, 122, 1); /* from existing theme */
+  --primary-3: rgb(10, 64, 88);      /* from existing theme */
+
+  /* Button Tokens */
+  --button-white-bg: var(--color-white);
+  --button-white-color: var(--color-gray-500);
+  --button-white-border-color: var(--color-slate-100);
+  --button-white-bg-hover: var(--color-white);
+  --button-white-color-hover: var(--color-gray-900);
+  --button-white-border-color-hover: var(--color-gray-900);
+
+  /* Console Component Tokens */
+  --shortcut-card-border: #374151;
+  --console-card-bg: var(--bg-secondary);
+  --console-card-bg-hover: var(--bg-alternative);
+  --console-card-border: var(--bg-secondary);
+  --console-card-border-hover: var(--bg-alternative);
+}
+
+/* ===== LIGHT THEME ===== */
+.light {
+  /* Background Colors */
+  --bg-primary: #f6f3f2;
+  --bg-secondary: var(--color-white);
+  --bg-tertiary: var(--color-slate-100);
+  --bg-alternative: var(--color-white);
+  --bg-alternative-border: var(--color-slate-300);
+  --bg-hover: var(--color-slate-100);
+  --bg-sidenav: var(--color-white);
+
+  /* Text Colors */
+  --text-primary: var(--color-black);
+  --text-secondary: var(--color-gray-500);
+  --text-tertiary: var(--color-gray-400);
+  --text-hover: var(--color-gray-500);
+  --text-sidenav: var(--color-gray-400);
+
+  /* Border Colors */
+  --border-primary: var(--color-slate-200);
+  --border-secondary: var(--color-slate-300);
+  --border-alternative: var(--color-slate-300);
+  --border-hover: var(--color-slate-400);
+
+  /* Primary Brand Colors */
+  --primary-1: rgba(105, 15, 208, 1);
+  --primary-2: rgba(226, 0, 255, 1);
+  --primary-3: rgba(61, 0, 255, 1);
+
+  /* Button Tokens */
+  --button-white-bg: var(--color-white);
+  --button-white-color: var(--color-gray-500);
+  --button-white-border-color: var(--color-slate-100);
+  --button-white-bg-hover: var(--color-white);
+  --button-white-color-hover: var(--color-gray-900);
+  --button-white-border-color-hover: var(--color-gray-900);
+
+  /* Console Component Tokens */
+  --shortcut-card-border: #374151;
+  --console-card-bg: var(--bg-secondary);
+  --console-card-bg-hover: var(--bg-alternative);
+  --console-card-border: var(--bg-secondary);
+  --console-card-border-hover: var(--bg-alternative);
+}
