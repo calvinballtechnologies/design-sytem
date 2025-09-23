@@ -28,7 +28,7 @@
     )
     var(--x, 0) / 200%;
   color: var(--color-white);
-  border-color: transparent;
+  border: none;
 }
 
 .button-primary:hover {
@@ -69,6 +69,7 @@
     hsl(250, 78%, 42%) 95.71%
   );
   color: var(--color-white);
+  border: none;
   position: relative;
   overflow: hidden;
 }
