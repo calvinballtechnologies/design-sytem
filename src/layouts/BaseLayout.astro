@@ -1,0 +1,40 @@
+---
+import Sidebar from '../components/Sidebar';
+import '../styles/index.css';
+
+interface Props {
+  title: string;
+  activePath: string;
+}
+
+const { title, activePath } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} | KJ Design System</title>
+  </head>
+  <body class="kj-reset kj-font light" style="margin: 0; background: var(--bg-primary); color: var(--text-primary);">
+    <div id="app-root" style="min-height: 100vh; display: flex;">
+      <Sidebar client:load activePath={activePath} />
+      <main style="flex: 1; padding: var(--spacing-6); overflow: auto;">
+        <div style="max-width: 1400px; margin: 0 auto;">
+          <slot />
+        </div>
+      </main>
+    </div>
+    <script is:inline>
+      // Prevent theme flash on page load
+      (function() {
+        var saved = localStorage.getItem('kj-theme') || 'light';
+        var map = { light: 'light', dark: 'neutral-dark', leaf: 'leaf' };
+        document.body.className = 'kj-reset kj-font ' + (map[saved] || 'light');
+        document.body.style.background = 'var(--bg-primary)';
+        document.body.style.color = 'var(--text-primary)';
+      })();
+    </script>
+  </body>
+</html>
