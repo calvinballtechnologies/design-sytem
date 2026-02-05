@@ -29,21 +29,11 @@ Source of truth for the KJ platform's UI architecture. This document covers the 
 
 The design system uses a **3-tier token hierarchy**. Always consume tokens from the highest applicable tier:
 
-```
-┌─────────────────────────────────────────────────────┐
-│  COMPONENT TOKENS  (component-tokens.css — 927 loc) │
-│  .button-primary, .card, .alert-error, .ds-input    │
-│  Ready-to-use classes. Use these first.              │
-├─────────────────────────────────────────────────────┤
-│  SEMANTIC TOKENS   (semantic-tokens.css — 204 loc)   │
-│  --bg-primary, --text-secondary, --border-hover      │
-│  Theme-aware variables. Use for custom components.   │
-├─────────────────────────────────────────────────────┤
-│  PRIMITIVE TOKENS  (primitive-tokens.css — 250 loc)  │
-│  --color-gray-500, --spacing-4, --font-size-lg       │
-│  Raw values. Avoid direct use — go through semantic. │
-└─────────────────────────────────────────────────────┘
-```
+| Tier | File | Examples | When to use |
+|------|------|----------|-------------|
+| **Component tokens** | `component-tokens.css` | `.button-primary`, `.card`, `.ds-input` | First choice — ready-to-use classes |
+| **Semantic tokens** | `semantic-tokens.css` | `--bg-primary`, `--text-secondary` | Custom components that need theme awareness |
+| **Primitive tokens** | `primitive-tokens.css` | `--color-gray-500`, `--spacing-4` | Avoid direct use — go through semantic |
 
 ### Why this matters
 
@@ -502,11 +492,11 @@ This keeps the design system as the single source of truth and prevents style dr
 
 ## Quick Reference Card
 
-```
-Need a color?         → var(--bg-primary), var(--text-secondary)
-Need a button?        → .button .button-primary
-Need a card?          → .ds-card or .ds-card-interactive
-Need an icon?         → import { IconName } from "lucide-react"
-Need conditional CSS? → cn("base", condition && "modifier")
-Need a new token?     → primitive → semantic → component → showcase → docs
-```
+| Need | Use |
+|------|-----|
+| Color | `var(--bg-primary)`, `var(--text-secondary)` |
+| Button | `.button .button-primary` |
+| Card | `.ds-card` or `.ds-card-interactive` |
+| Icon | `import { IconName } from "lucide-react"` |
+| Conditional CSS | `cn("base", condition && "modifier")` |
+| New token | primitive → semantic → component → showcase → docs |
